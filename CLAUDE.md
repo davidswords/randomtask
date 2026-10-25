@@ -7,6 +7,7 @@ A minimal, client-side encrypted, open source todo app built with TypeScript and
 - **Test-driven:** write a failing test, make it pass, then refactor. No behaviour without a test.
 - **Small atomic steps:** each step is verified working, with tests, before the next one starts.
 - **Clean code:** small, well-named functions. Keep domain logic in `packages/core` as pure TypeScript, free of UI and platform code.
+- **Document how to install it:** when a release target from `docs/roadmap.md` ships, the README's Install section says how to get randomtask from it.
 - **Ask, don't guess:** when a product decision is open in `docs/decisions.md`, ask instead of assuming.
 
 ## Testing

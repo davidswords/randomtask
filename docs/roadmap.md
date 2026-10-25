@@ -17,7 +17,7 @@ The design for stages 3 to 10 is in [design/encryption-and-accounts.md](design/e
 
 ## Release targets
 
-Where people can get randomtask, alongside the stages above. Each step builds on the files the one before it publishes.
+Where people can get randomtask, alongside the stages above. Each step builds on the files the one before it publishes, and each target, once it ships, gets install instructions in the [README](../README.md#install).
 
 1. **Every desktop platform on GitHub Releases.** The release workflow also builds Linux (AppImage, `.deb` and `.rpm`), Windows (`.msi` and installer) and Intel Macs, next to the Apple Silicon `.dmg`. Apple notarization (a Developer ID, $99 a year) removes Gatekeeper's warning, and Windows code signing removes SmartScreen's.
 2. **Linux and Windows package managers,** each kept up to date from the release, as the Homebrew tap is:

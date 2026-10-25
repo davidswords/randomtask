@@ -4,6 +4,8 @@ export default defineConfig({
   test: {
     coverage: {
       provider: "v8",
+      // json-summary feeds the coverage badge.
+      reporter: ["text", "json-summary"],
       include: ["src/**"],
       // The shared contract is test code that other packages run.
       exclude: ["src/**/*.test.ts", "src/**/*.contract.ts", "src/testing.ts"],

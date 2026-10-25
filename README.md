@@ -1,5 +1,10 @@
 # randomtask
 
+[![CI](https://github.com/davidswords/randomtask/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/davidswords/randomtask/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdavidswords%2Frandomtask%2Fbadges%2Fcoverage.json)](https://github.com/davidswords/randomtask/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/davidswords/randomtask)](https://github.com/davidswords/randomtask/releases/latest)
+[![Licence: GPL-3.0](https://img.shields.io/github/license/davidswords/randomtask)](LICENSE)
+
 A minimal, client-side encrypted todo app. It does todos and nothing else: no calendar, notes or timers. Tasks are organised with hierarchical tags.
 
 randomtask is at an early stage. It keeps a simple task list on your device, encrypted once you create a free account, and the rest of the todo features are being built test-first. The decisions behind it are in [docs/decisions.md](docs/decisions.md).

@@ -7,6 +7,7 @@ A minimal, client-side encrypted, open source todo app built with TypeScript and
 - **Test-driven:** write a failing test, make it pass, then refactor. No behaviour without a test.
 - **Small atomic steps:** each step is verified working, with tests, before the next one starts.
 - **Clean code:** small, well-named functions. Keep domain logic in `packages/core` as pure TypeScript, free of UI and platform code.
+- **Document how to install it:** when a release target from `docs/roadmap.md` ships, the README's Install section says how to get randomtask from it.
 - **Ask, don't guess:** when a product decision is open in `docs/decisions.md`, ask instead of assuming.
 
 ## Testing
@@ -55,7 +56,7 @@ Run these from the repository root. Node's version is in `.nvmrc`.
 
 ## CI and releases
 
-- `.github/workflows/ci.yml` runs typecheck and tests, plus formatting, clippy and tests for each crate under `crates/client`, `crates/server` and `apps/desktop/src-tauri`, on pull requests and on pushes to `main`. Its `e2e` job builds the app and runs the end-to-end tests on Linux. Its `web` job lints the WebAssembly crate, builds the web app and runs its end-to-end tests in the runner's Google Chrome. Its `server-image` job starts the server with Docker Compose and checks it answers. Its `production` job builds `deploy`'s images and checks the web app and API are served, at `.localhost` addresses over HTTP. Its `cross-platform` job runs the tests of `crypto`, `store` and `vault` on Windows and macOS, and compiles them for iOS, Android and the browser (WebAssembly, with `api` and `app` too), so platform-specific breakage is caught on every pull request.
+- `.github/workflows/ci.yml` runs typecheck and tests, plus formatting, clippy and tests for each crate under `crates/client`, `crates/server` and `apps/desktop/src-tauri`, on pull requests and on pushes to `main`. Its `e2e` job builds the app and runs the end-to-end tests on Linux. Its `web` job lints the WebAssembly crate, builds the web app and runs its end-to-end tests in the runner's Google Chrome. Its `server-image` job starts the server with Docker Compose and checks it answers. Its `production` job builds `deploy`'s images and checks the web app and API are served, at `.localhost` addresses over HTTP. On pushes to `main`, its `coverage-badge` job adds up the line coverage the TypeScript and Rust jobs measured and publishes it to the `badges` branch, which the README's coverage badge reads. Its `cross-platform` job runs the tests of `crypto`, `store` and `vault` on Windows and macOS, and compiles them for iOS, Android and the browser (WebAssembly, with `api` and `app` too), so platform-specific breakage is caught on every pull request.
 - `.github/workflows/images.yml` publishes the server and web app images to the GitHub container registry, as `main` from main and as `vX.Y.Z` and `latest` from a release tag.
 - `.github/workflows/release.yml` builds the Apple Silicon `.dmg`. On a `v*` tag it publishes a GitHub release. The tag must match the version in `apps/desktop/package.json`.
 

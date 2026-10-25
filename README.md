@@ -1,7 +1,7 @@
 # randomtask
 
 [![CI](https://github.com/davidswords/randomtask/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/davidswords/randomtask/actions/workflows/ci.yml)
-[![Coverage: 100%, enforced in CI](https://img.shields.io/badge/coverage-100%25%20enforced-brightgreen)](CLAUDE.md#testing)
+[![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdavidswords%2Frandomtask%2Fbadges%2Fcoverage.json)](https://github.com/davidswords/randomtask/actions/workflows/ci.yml)
 [![Latest release](https://img.shields.io/github/v/release/davidswords/randomtask)](https://github.com/davidswords/randomtask/releases/latest)
 [![Licence: GPL-3.0](https://img.shields.io/github/license/davidswords/randomtask)](LICENSE)
 

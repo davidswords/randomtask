@@ -6,6 +6,8 @@ export default defineConfig({
     exclude: [...configDefaults.exclude, "e2e/**"],
     coverage: {
       provider: "v8",
+      // json-summary feeds the coverage badge.
+      reporter: ["text", "json-summary"],
       include: ["src/**", "scripts/**"],
       // main.ts and worker.ts only start the app, so only the end-to-end tests reach them.
       // check-tools.ts only runs the commands whose output tools.ts judges.

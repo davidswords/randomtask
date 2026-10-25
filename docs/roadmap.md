@@ -15,4 +15,23 @@ The order the core of randomtask is built in. Each stage is built test-first and
 
 The design for stages 3 to 10 is in [design/encryption-and-accounts.md](design/encryption-and-accounts.md). Following Standard Notes, the encryption keys come from the account password, so encryption and accounts may be built together.
 
+## Release targets
+
+Where people can get randomtask, alongside the stages above. Each step builds on the files the one before it publishes.
+
+1. **Every desktop platform on GitHub Releases.** The release workflow also builds Linux (AppImage, `.deb` and `.rpm`), Windows (`.msi` and installer) and Intel Macs, next to the Apple Silicon `.dmg`. Apple notarization (a Developer ID, $99 a year) removes Gatekeeper's warning, and Windows code signing removes SmartScreen's.
+2. **Linux and Windows package managers,** each kept up to date from the release, as the Homebrew tap is:
+   - the **AUR** (`yay -S randomtask-bin`), from the `.deb`;
+   - **Flathub**, built from source, which reaches every distribution and GNOME Software and KDE Discover;
+   - an **apt repository** for Debian and Ubuntu, and **Fedora COPR** for `.rpm`;
+   - the **Snap Store** and **Nixpkgs**;
+   - **winget** and **Scoop** on Windows.
+3. **Android without Google,** for GrapheneOS and other de-Googled phones, once the screens fit a phone (Tauri 2 builds the Android app):
+   - a signed **APK on GitHub Releases**, which **Obtainium** installs and updates;
+   - **Accrescent**, the store GrapheneOS recommends;
+   - **F-Droid**, which builds from source; with reproducible builds it ships our signature, so its builds and ours update each other.
+4. **The app stores:** **Google Play**, the **iOS App Store** (with TestFlight for betas), the **Microsoft Store** and the **Mac App Store**. They wait on two open questions in [decisions.md](decisions.md): the GPL and the stores' terms, and paying for Sync inside the apps. Until then, iPhone users can add the web app at randomtask.ch to their home screen.
+
+Official Debian and Arch repositories aren't targets: their maintainers choose what to package.
+
 Tags, smart lists and the UI build on these stages. A full list of features is still to be mapped out.

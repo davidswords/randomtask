@@ -70,6 +70,7 @@ Product and technical decisions for randomtask. Add to this file when a decision
 ## Platforms and distribution
 
 - **Desktop:** macOS, Linux and Windows. **Mobile** comes later.
+- **randomtask is offered wherever people install apps,** in the order in [the roadmap](roadmap.md#release-targets): every desktop platform on GitHub Releases, then Linux and Windows package managers, then Android without Google (Obtainium, Accrescent and F-Droid, for GrapheneOS), then the app stores.
 - **The first release target is macOS on Apple Silicon, installed with Homebrew.** The app is ad-hoc signed and not notarized for now, so Gatekeeper warns on first launch.
 - **`randomtask` in a terminal opens the app,** as clicking it does. The Homebrew cask installs the command.
 - **There is no quick-add command:** tasks are added in the app.
@@ -124,3 +125,5 @@ Product and technical decisions for randomtask. Add to this file when a decision
 - The server: whether emails are verified.
 - Pricing details: the length of the free trial, and which merchant of record.
 - Whether the repository stays public.
+- The GPL and the app stores: Apple's terms add restrictions the GPL forbids. Shipping to the App Store and Mac App Store needs an added permission in the licence (and contributors' agreement to it), or another licence.
+- Paying for Sync in the mobile apps: Apple and Google expect subscriptions sold in their apps to use their billing (a 15–30% fee), with exceptions for linking out that depend on the country.

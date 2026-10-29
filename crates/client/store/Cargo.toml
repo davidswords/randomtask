@@ -6,7 +6,7 @@ description = "SQLite storage for randomtask"
 license = "GPL-3.0-only"
 
 [dependencies]
-rusqlite = { version = "0.40", features = ["bundled"] }
+rusqlite = { version = "0.41", features = ["bundled"] }
 serde = { version = "1", features = ["derive"] }
 
 [dev-dependencies]
